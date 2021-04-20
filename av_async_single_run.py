@@ -1,6 +1,9 @@
 import aiohttp
 import asyncio
 import os
+# To work with the .env file
+from dotenv import load_dotenv
+load_dotenv()
 
 API_KEY = os.getenv('ALPHAVANTAGE_API_KEY')
 URL = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'

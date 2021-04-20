@@ -2,10 +2,13 @@ import asyncio
 import aiohttp
 import os
 import time
+# To work with the .env file
+from dotenv import load_dotenv
+load_dotenv()
 
 api_key = os.getenv('ALPHAVANTAGE_API_KEY')
 url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'
-symbols = ['AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL','AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL']
+symbols = ['AAPL', 'GOOG', 'TSLA', 'MSFT', 'AAPL']
 results = []
 
 start = time.time()

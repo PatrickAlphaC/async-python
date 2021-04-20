@@ -2,20 +2,13 @@ import aiohttp
 import asyncio
 import os
 import time
+# To work with the .env file
+from dotenv import load_dotenv
+load_dotenv()
 
 API_KEY = os.getenv('ALPHAVANTAGE_API_KEY')
 URL = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'
-SYMBOLS = ['AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
-           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME']
+SYMBOLS = ['AAPL', 'GOOG', 'TSLA', 'MSFT', 'PEP']
 results = []
 
 
