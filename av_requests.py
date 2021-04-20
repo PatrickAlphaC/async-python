@@ -5,6 +5,15 @@ import time
 api_key = os.getenv('ALPHAVANTAGE_API_KEY')
 url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'
 symbols = ['AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
            'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME']
 results = []
 

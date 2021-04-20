@@ -6,6 +6,15 @@ import time
 API_KEY = os.getenv('ALPHAVANTAGE_API_KEY')
 URL = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'
 SYMBOLS = ['AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
+           'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME','AAPL', 'GOOG', 'TSLA', 'MSFT',
            'PEP', 'IBM', 'FB', 'JPM', 'JNJ', 'GME']
 results = []
 
@@ -21,6 +30,7 @@ async def run_tasks():
     session = aiohttp.ClientSession()
     tasks = get_tasks(session)
     # Can't do this!!
+    # It has to be a one-liner
     # for symbol in symbols:
     #     tasks.append(session.get(url.format(symbol, api_key)))
     responses = await asyncio.gather(*tasks)
