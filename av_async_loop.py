@@ -21,7 +21,9 @@ def get_tasks(session):
 
 async def run_tasks():
     session = aiohttp.ClientSession()
-    tasks = get_tasks(session)
+    # tasks = get_tasks(session)
+    tasks = [session.get(URL.format(symbol, API_KEY), ssl=False) for symbol in SYMBOLS]
+
     # Can't do this!!
     # for symbol in symbols:
     #     tasks.append(session.get(url.format(symbol, api_key)))

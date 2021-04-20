@@ -22,6 +22,8 @@ def get_tasks(session):
 async def get_symbols():
     async with aiohttp.ClientSession() as session:
         tasks = get_tasks(session)
+        # you could also do
+        # tasks = [session.get(URL.format(symbol, API_KEY), ssl=False) for symbol in symbols]
         responses = await asyncio.gather(*tasks)
         # for response in responses:
         #     results.append(await response.json())
